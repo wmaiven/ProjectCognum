@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const Routes = require("./Hello/HelloController");
+const Hello = require("./Hello/HelloController");
 const Api = require("./Api/ApiController");
+const EmployeeController = require("./Employee/EmployeeController");
 
 // Middleware para permitir solicitações de diferentes origens (CORS)
 app.use(cors());
@@ -13,11 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Rotas
-app.use('/', Routes);
-
-
-
-
+app.use('/', Hello);
+app.use('/', EmployeeController);
 // Inicialização do servidor na porta 3000
 app.listen(3000, () => {
     console.log("API RODANDO!");

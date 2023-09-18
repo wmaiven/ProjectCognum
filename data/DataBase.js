@@ -6,5 +6,4 @@ const connection = new Sequelize('data_cognum', 'root', '1234', {
 
 })
 //connection.sync({force: true})
-
 module.exports = connection;
