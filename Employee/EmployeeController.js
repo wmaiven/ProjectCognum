@@ -70,7 +70,6 @@ router.put("/employees/update", (req, res) => {
 });
 
 // deletando dados no banco de dados
-
 router.delete("/employees/delete", (req, res) => {
     const id = req.body.id;
     if (id!= undefined && id!= null) {
