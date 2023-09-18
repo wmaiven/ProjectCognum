@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Employee = require('./Employee');
+const Api = require("../Api/ApiController");
+const axios = require("axios");
 
 // lendo banco de dados
 router.get("/employees/read", (req, res) => {
@@ -94,6 +96,29 @@ router.delete("/employees/delete", (req, res) => {
         })
     }
 });
+
+//populando com usuarios o banco de dados com a Api
+router.get("/populate", async (req, res) => {
+    try {
+      const Users = await Api;
+      Users.map(async (User) => {
+        try {
+          await axios.post("http://localhost:3000/employees/create", {
+            name: User.name,
+            role: User.role
+          });
+          console.log(`Usuário ${User.name} adicionado com sucesso`);
+        } catch (error) {
+          console.error(`Erro ao adicionar usuário ${User.name}:`, error);
+        }
+      });
+  
+      res.status(200).json({ message: "Banco de dados populado com sucesso!" });
+    } catch (error) {
+      console.error("Erro ao obter os usuários:", error);
+      res.status(500).json({ error: "Erro ao obter os usuários" });
+    }
+  });
 
 module.exports = router;
 
