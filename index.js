@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const Hello = require("./Hello/HelloController");
-const Api = require("./Api/ApiController");
+//const Api = require("./Api/ApiController");
 const EmployeeController = require("./Employee/EmployeeController");
 
 // Middleware para permitir solicitações de diferentes origens (CORS)
