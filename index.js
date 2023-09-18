@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const APICONTROLLER = require("./Api");
+const Routes = require("./routes/Routes");
+const Api = require("./Api/ApiController");
 
 // Middleware para permitir solicitações de diferentes origens (CORS)
 app.use(cors());
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Rotas
-app.use('/', APICONTROLLER);
+app.use('/', Routes);
 
 
 
