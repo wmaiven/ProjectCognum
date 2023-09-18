@@ -1,0 +1,16 @@
+Olá,agardeço a oportunidade de estar fazendo parte desse processo seletivo!
+Segue o passo a passo de como rodar o projeto:
+1:abrir o terminal e dar o comando npm i para instalar as dependencias 
+2:ter configurado o MySql corretamente na maquina
+3:criar no MySql o banco data_cognum
+4:na pasta /data/DataBase trocar a senha root que foi cadastrado no cmento da configuração do MySql
+5:na pasta /data/DataBase descomentar a linha 8 
+6:dar um node index.js ou npx nodemon index.js já que o nodemon esta instalado nas dependencias
+7:voltar na pasta /data/DataBase e comentar a linha 8
+8:utilizar o postman ou outro metodo para fazer as requisiçãoes 
+OBS: a api randonUser não dava a informação de role ou de job então para resolver isso criei um banco de dados falso com 
+varios trabalhos diferentes para o cadastro de usuarios no /populate não desse em role apenas undofined utilizei esse data-base fake para
+pegar de forma aleatoria uma role e cadastrar no banco de dados.Não consegui fazer o desafio 4, pois envolve tecnologias que eu ainda não aprendi,
+acredito que com mais estudo logo conseguirei realizar o desafio 4, mas para não postergar mais ainda a entrega optei por não realiza-lo;
+
+
