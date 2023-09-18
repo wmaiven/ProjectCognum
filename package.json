@@ -1,0 +1,19 @@
+{
+  "name": "projectcognum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmaiven/ProjectCognum.git"
+  },
+  "author": "Weslley Maiven Muniz da Cunha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmaiven/ProjectCognum/issues"
+  },
+  "homepage": "https://github.com/wmaiven/ProjectCognum#readme"
+}
